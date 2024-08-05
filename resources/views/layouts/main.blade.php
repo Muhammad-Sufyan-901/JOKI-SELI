@@ -33,12 +33,18 @@
         <li class="nav-item">
           <a class="nav-link" href="/testimoni">Testimoni</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/response">Respon</a>
+        </li>
       </ul>
     </div>
 
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ms-auto">
-        <a class="nav-link" href="/">Keluar</a>
+       <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                        <input class="btn" type="submit" name="logout" value="Logout">
+                        </form>
       </div>
     </div>
   </div>
@@ -56,11 +62,14 @@
 <div class="container">
     <div class="row">
         <div class="col-12 p-3 bg-white">
-            <h4 class="text-center">Data Proyek</h4>
-            <p class="text-center">Selamat datang <span class="text-primary"></span> </p>
+            <h4 class="text-center">Data</h4>
+            {{-- Use the user name who logged in --}}
+            <p class="text-center">Selamat datang <span class="text-primary">   </span> </p>
         </div>
     </div>
 </div>
+
+
 
         {{-- Main Start --}}
         @yield('content')

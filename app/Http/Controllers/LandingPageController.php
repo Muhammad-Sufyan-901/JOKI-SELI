@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Proyek;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LandingPageController extends Controller
 {
@@ -12,7 +13,8 @@ class LandingPageController extends Controller
     {
         $proyek = Proyek::all();
         $testimoni = Testimonial::all();
-        return view('landingPage.index', compact('proyek', 'testimoni'));
+        $user = Auth::user();
+        return view('landingPage.index', compact('proyek', 'testimoni', 'user'));
     }
 
     public function detail($id_proyek)

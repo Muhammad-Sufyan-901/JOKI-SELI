@@ -28,8 +28,8 @@
       rel="stylesheet"
       href="../node_modules/photoswipe/dist/photoswipe.css"
     />
-     @vite('resources/css/app.css')
-       <link rel="icon" type="image/png" href="{{ asset('images/logo-transparent.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('images/logo-transparent.png') }}">
+    @vite('resources/css/app.css')
   </head>
   <body class="overflow-x-hidden">
     <!-- ===== Navbar ===== -->
@@ -378,7 +378,7 @@
     <!-- ===== End Our Offices ===== -->
 
     <!-- ===== Contact Section ===== -->
-    <section class="container mx-auto pt-12 pb-36">
+    <section class="container mx-auto  pt-12 pb-36">
       <div class="flex flex-col space-y-6">
         <h2 class="text-sky-400 text-5xl font-bold">Kontak Kami</h2>
 
@@ -421,44 +421,50 @@
       <p class="text-lg my-16 text-center">Atau bisa hubungi kami dibawah ini</p>
 
       <form
-        action=""
+        action="{{ route('response.store') }}"
         class="w-full"
-      >
+        method="POST"
+        >
+        @csrf
         <label class="form-control w-full mb-6">
           <div class="label">
-            <span class="label-text">What is your name?</span>
+            <span class="label-text">Nama Lengkap</span>
           </div>
           <input
             type="text"
+            name="nama_lengkap"
             placeholder="Type here"
             class="input input-bordered w-full"
           />
         </label>
         <label class="form-control w-full mb-6">
           <div class="label">
-            <span class="label-text">What is your name?</span>
+            <span class="label-text">Alamat Email</span>
           </div>
           <input
             type="text"
+            name="email"
             placeholder="Type here"
             class="input input-bordered w-full"
           />
         </label>
         <label class="form-control w-full mb-6">
           <div class="label">
-            <span class="label-text">What is your name?</span>
+            <span class="label-text">No Whatsapp</span>
           </div>
           <input
             type="text"
+            name="no_hp"
             placeholder="Type here"
             class="input input-bordered w-full"
           />
         </label>
         <label class="form-control w-full mb-6">
           <div class="label">
-            <span class="label-text">What is your name?</span>
+            <span class="label-text">Pesan</span>
           </div>
           <textarea
+            name="pesan"
             class="textarea textarea-bordered h-36"
             placeholder="Message"
           ></textarea>

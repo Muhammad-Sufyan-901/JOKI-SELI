@@ -6,6 +6,7 @@ use App\Models\GambarProyek;
 use App\Models\Proyek;
 use App\Models\Testimonial;
 use App\Models\User;
+use App\Models\Response;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use PHPUnit\Event\Code\Test;
@@ -27,6 +28,7 @@ class DatabaseSeeder extends Seeder
         Proyek::factory(10)->create();
         GambarProyek::factory(10)->create();
         Testimonial::factory(10)->create();
+        Response::factory(10)->create();
 
 
     }

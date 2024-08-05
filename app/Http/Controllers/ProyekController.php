@@ -69,7 +69,6 @@ class ProyekController extends Controller
     public function edit(Proyek $proyek)
     {
         $proyek = Proyek::find($proyek->id_proyek);
-        dd($proyek);
         return view('proyek.edit', compact('proyek'));
     }
 
@@ -87,7 +86,7 @@ class ProyekController extends Controller
             'deskripsi_proyek' => $request->deskripsi_proyek,
        ];
         $proyek->update($data);
-        return redirect()->route('proyek.index')->with('update', 'Proyek berhasil diubah');
+        return redirect()->route('proyek')->with('update', 'Proyek berhasil diubah');
     }
 
     /**
@@ -96,6 +95,6 @@ class ProyekController extends Controller
     public function destroy(Proyek $proyek)
     {
         Proyek::destroy($proyek->id_proyek);
-        return redirect()->route('proyek.index')->with('hapus', 'Proyek berhasil dihapus');
+        return redirect()->route('proyek')->with('hapus', 'Proyek berhasil dihapus');
     }
 }

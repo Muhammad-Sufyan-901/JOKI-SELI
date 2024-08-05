@@ -124,7 +124,7 @@
     <!-- ===== End Navbar ===== -->
 
     <!-- ===== Detail Project Section ===== -->
-    <section class="container mx-auto py-11">
+    <section class="container mx-auto py-2">
       <div class="grid grid-cols-[40%_55%] gap-[5%]">
         <div class="flex flex-col gap-y-10 justify-start items-start">
           <a
@@ -138,7 +138,7 @@
           <h2 class="text-sky-400 text-5xl font-bold max-w-md">{{ $proyek->nama_proyek }}</h2>
 
           <div class="flex flex-col w-full text-lg">
-            <div class="border-b py-2">
+            <div class="border-b py-11">
               <span class="font-bold w-[21%] inline-flex justify-between items-center">Location <span>:</span></span>
              {{$proyek->lokasi_proyek}}
             </div>
