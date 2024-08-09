@@ -20,8 +20,8 @@
                 <tr>
                   <td>{{ $loop->iteration }}</td>
                   <td>{{ $item->nama_lengkap }}</td>
-                  <td>{{ $item->email }}</td>
-                  <td>{{ $item->no_hp }}</td>
+                  <td><a href="mail:to{{ $item->email }}">{{ $item->email }}</a></td>
+                  <td><a href="https://wa.me/+62{{ $item->no_hp }}">{{ $item->no_hp }}</a></td>
                   <td>{{ $item->pesan }}</td>
                   </tr>
       @endforeach

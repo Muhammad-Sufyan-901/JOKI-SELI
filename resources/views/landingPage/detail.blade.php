@@ -183,7 +183,7 @@
             </div>
           </div>
 
-          <form
+          {{-- <form
             action=""
             class=""
           >
@@ -201,7 +201,7 @@
             <button class="btn btn-info text-white btn-block mt-3">Subscribe</button>
 
             <span class="text-gray-400 text-xs inline-block mt-3">By subscribing you agree to with our Privacy Policy.</span>
-          </form>
+          </form> --}}
 
           <div class="space-y-6">
             <h4 class="font-bold text-xl">Share</h4>
@@ -321,38 +321,14 @@
     </section>
     <!-- ===== End Other Project ===== -->
 
-    <!-- ===== Footer ===== -->
+   <!-- ===== Footer ===== -->
     <footer class="footer container mx-auto text-base-content">
       <nav class="min-w-[500px] w-full">
         <a
           href="#"
           class="w-[140px] mb-6"
         >
-          <img
-            src="{{ asset('images/logo-transparent.png') }}"
-            alt="Company Logo"
-            class="w-[140px]"
-          />
         </a>
-
-        <form class="w-full">
-          <fieldset class="form-control">
-            <label class="label">
-              <span class="label-text mb-4">Masukan alamat email anda untuk berlangganan berita dari kami.</span>
-            </label>
-            <div class="join">
-              <input
-                type="text"
-                placeholder="username@site.com"
-                class="input input-bordered join-item w-80"
-              />
-              <button class="btn btn-info text-white join-item">Subscribe</button>
-            </div>
-            <label class="label mt-4">
-              <span class="label-text mb-4 max-w-lg">By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company. </span>
-            </label>
-          </fieldset>
-        </form>
       </nav>
 
       <nav>
@@ -364,16 +340,10 @@
           <i class="fa-brands fa-instagram"></i><span>Instagram</span>
         </a>
         <a
-          href="#"
+          href="https://www.instagram.com/kna.construction?igsh=MWc5bHhtbmg3NGlmdQ=="
           class="link link-hover space-x-3 inline-flex items-center"
         >
           <i class="fa-brands fa-facebook"></i><span>Facebook</span>
-        </a>
-        <a
-          href="#"
-          class="link link-hover space-x-3 inline-flex items-center"
-        >
-          <i class="fa-brands fa-x-twitter"></i><span>X</span>
         </a>
         <a
           href="#"
@@ -388,42 +358,36 @@
         <a
           href="#"
           class="link link-hover"
-          >Homepage</a
+          >Beranda</a
         >
         <a
-          href="#"
+          href="#proyekKami"
           class="link link-hover"
-          >Projects</a
+          >Proyek Kami</a
         >
         <a
-          href="#"
+          href="#layanan"
           class="link link-hover"
-          >Solutions</a
+          >Layanan</a
         >
         <a
-          href="#"
+          href="#kontak"
           class="link link-hover"
-          >Associates Program</a
+          >Kontak Kami</a
         >
         <a
-          href="#"
+          href="#cabangKami"
           class="link link-hover"
-          >Our Office</a
-        >
-        <a
-          href="#"
-          class="link link-hover"
-          >Blogs</a
+          >Cabang Kami</a
         >
       </nav>
 
       <nav>
         <h6 class="text-black font-bold text-lg mb-4">Quick Links</h6>
-        <a class="link link-hover">Email : knaconstruction@gmail.com</a>
-        <a class="link link-hover">PDF Company Profile</a>
+        <a  href="mailto:keanu.konstruksi@gmail.com" class="link link-hover">Email : knaconstruction@gmail.com</a>
+        {{-- <a class="link link-hover">PDF Company Profile</a> --}}
       </nav>
     </footer>
-
     <footer class="footer container mx-auto py-6 text-base-content border-base-300 border-t">
       <aside class="grid-flow-col items-center">
         <p>

@@ -71,13 +71,16 @@
               <a href="#proyekKami">Proyek</a>
             </li>
             <li>
+              <a href="#proyekKami">Layanan</a>
+            </li>
+            <li>
               <a href="#">Layanan</a>
             </li>
             <li>
               <a href="#testimoni">Testimoni</a>
             </li>
             <li>
-              <a href="#cabangKami">Cabang Kami</a>
+              <a href="#cabangKami">Kantor Kami</a>
             </li>
             <li>
               <a href="#testimoni">Testimoni</a>
@@ -108,7 +111,10 @@
             <a href="#proyekKami">Proyek</a>
           </li>
           <li class="text-base font-semibold">
-            <a href="#cabangKami">Cabang Kami</a>
+            <a href="#proyekKami">Layanan</a>
+          </li>
+          <li class="text-base font-semibold">
+            <a href="#cabangKami">Kantor Kami</a>
           </li>
           <li class="text-base font-semibold">
             <a href="#testimoni">Testimoni</a>
@@ -118,11 +124,11 @@
 
       <!-- ===== Navbar CTA Buttons ===== -->
       <div class="navbar-end space-x-4">
-        <a class="btn btn-info text-white rounded-xl px-12 py-4">Hubungi Kami</a>
+        <a class="btn btn-info text-white rounded-xl px-12 py-4" href="#kontak">Hubungi Kami</a>
 
-        <button class="btn btn-square btn-outline btn-info hover:text-white">
+        {{-- <button class="btn btn-square btn-outline btn-info hover:text-white">
           <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
+        </button> --}}
       </div>
     </header>
     <!-- ===== End Navbar ===== -->
@@ -130,26 +136,25 @@
     <!-- ===== Hero Section ===== -->
     <section class="hero min-h-[calc(100vh-64px)] relative">
       <div class="hero-overlay bg-black bg-opacity-40 z-[2] absolute top-0 left-0 w-full h-full"></div>
-      <video
-        autoplay
+      {{-- <video
         loop
         muted
         playsinline
         class="absolute top-0 left-0 w-full h-full object-cover"
       >
         <source
-          src="{{ asset('videos/hero-video.mp4') }}"
+          src="{{ asset('videos/KNA.mp4') }}"
           type="video/mp4"
         />
-      </video>
+      </video> --}}
 
-      <div class="hero-content text-white z-10 text-center">
+      {{-- <div class="hero-content text-white z-10 text-center">
         <div class="max-w-xl">
           <h1 class="mb-5 text-5xl font-bold">Capai Properti Impianmu Berasama Kami</h1>
           <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
           <button class="btn btn-info px-8 py-2 text-white">Tentang Kami</button>
         </div>
-      </div>
+      </div> --}}
 
       <div class="bg-info py-4 px-8 z-10 rounded-full absolute bottom-12 right-12">
         <h3 class="font-semibold text-xl text-white">PT. Keanu Abimanyu Konstruksi</h3>
@@ -162,44 +167,43 @@
       <div class="flex flex-col space-y-8">
         <h1 class="text-sky-400 text-6xl font-bold">Ahli Dalam Membangun Visi Anda</h1>
 
-        <div class="flex items-center space-x-4">
+        {{-- <div class="flex items-center space-x-4">
           <div class="bg-neutral-100 font-semibold text-sky-400 border py-3 px-6 rounded-tl-[2rem] rounded-br-[2rem]">Residental</div>
           <div class="bg-neutral-100 font-semibold text-sky-400 border py-3 px-6 rounded-tl-[2rem] rounded-br-[2rem]">Commercial</div>
           <div class="bg-neutral-100 font-semibold text-sky-400 border py-3 px-6 rounded-tl-[2rem] rounded-br-[2rem]">Interior</div>
-        </div>
+        </div> --}}
       </div>
 
       <div class="flex flex-col space-y-8">
         <div class="flex space-x-4">
-          <button class="btn btn-info text-white px-12 py-4">HUBUNGI KAMI</button>
-          <button class="btn btn-info btn-outline px-12 py-4">LIHAT PROYEK</button>
+          <a href="#kontak" class="btn btn-info btn-outline px-12 py-4"> HUBUNGI KAMI</a>
+          <a href="#proyekKami" class="btn btn-info btn-outline px-12 py-4"> LIHAT PROYEK</a>
+          {{-- <button class="btn btn-info text-white px-12 py-4">HUBUNGI KAMI</button> --}}
+          {{-- <button class="btn btn-info btn-outline px-12 py-4">LIHAT PROYEK</button> --}}
         </div>
 
         <p class="text-lg">
-          <span class="font-bold">From basic to extravagant : </span>
-          We believe that every space has the potential to be remarkable. Our team of skilled professionals is committed to bringing your vision to life, ensuring that every detail is meticulously executed, whether you’re envisioning a
-          standard project or the creation of a luxurious villa.
+          <span class="font-bold">Tentang Kami : </span>
+         PT Keanu Abimanyu Konstruksi atau biasa disebut KNaA Construction ini didirikan pada tahun 2018 oleh Bapak Jhundanuars S.T.Sejak pendiriannya, perusahaan ini telah sukses menyelesaikan berbagai proyek konstruksi, renovasi dan interior di Bali dan sekitarnya.
         </p>
 
         <div class="grid grid-cols-2 gap-12">
           <div class="flex flex-col space-y-4">
-            <h6 class="text-2xl font-bold">Vision</h6>
-            <ul class="list-decimal ml-5 space-y-2">
+            <h6 class="text-2xl font-bold">Visi</h6>
+            <ul class=" ml-5 space-y-2">
+              <li>Menjadi kontraktor terkemuka yang memberikan solusi konstruksi inovatif dan berkualitas tinggi.</li>
+              {{-- <li>Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
               <li>Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
               <li>Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
-              <li>Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
-              <li>Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
-              <li>Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+              <li>Lorem ipsum, dolor sit amet consectetur adipisicing.</li> --}}
             </ul>
           </div>
           <div class="flex flex-col space-y-4">
-            <h6 class="text-2xl font-bold">Mission</h6>
-            <ul class="list-decimal ml-5 space-y-2">
-              <li>Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
-              <li>Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
-              <li>Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
-              <li>Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
-              <li>Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+            <h6 class="text-2xl font-bold">Misi</h6>
+            <ul class=" ml-5 list-decimal space-y-2">
+              <li>Memberikan pelayanan konstruksi yang profesional dan tepat waktu</li>
+              <li>Mengutamakan kepuasan pelanggan secara keberlanjutan </li>
+              <li>Mengembangkan sumber daya manusia yang kompeten dan berintegritas</li>
             </ul>
           </div>
         </div>
@@ -213,7 +217,7 @@
         <div class="flex flex-col space-y-6">
           <h2 class="text-sky-400 text-5xl font-bold" id="proyekKami">Proyek Kami</h2>
 
-          <p class="text-lg max-w-4xl">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis dignissimos officia laudantium quod eius nisi?</p>
+          <p class="text-lg max-w-4xl">Kami telah bekerja keras untuk mencapai ini. Ini adalah proyek kami!</p>
         </div>
 
         <a
@@ -297,11 +301,6 @@
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti, consequuntur iusto quis rerum suscipit alias aliquam earum doloremque quos tenetur exercitationem odit quisquam adipisci, cum reprehenderit vel provident sed
         voluptatum quasi consequatur ab recusandae possimus! Earum quam et error officia iure, eligendi suscipit, corporis eveniet distinctio est repudiandae voluptatum repellat.
       </p>
-      <a
-        href="#"
-        class="btn bg-white text-sky-400 mt-2 px-6 font-semibold text-lg"
-        >Cari Tahu Lebih Lanjut</a
-      >
     </section>
     <!-- ===== End Services ===== -->
 
@@ -349,7 +348,7 @@
       <div class="flex flex-col space-y-6">
         <h2 class="text-sky-400 text-5xl font-bold" id="cabangKami">Kantor Kami</h2>
 
-        <p class="text-lg max-w-4xl">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis dignissimos officia laudantium quod eius nisi?</p>
+        <p class="text-lg max-w-4xl">Untuk kunjungan langsung atau kebutuhan lainnya, Anda dapat menemukan kami di kantor kami</p>
       </div>
 
       <div class="grid grid-cols-[40%_60%] gap-16 mt-12">
@@ -380,40 +379,47 @@
     <!-- ===== Contact Section ===== -->
     <section class="container mx-auto  pt-12 pb-36">
       <div class="flex flex-col space-y-6">
-        <h2 class="text-sky-400 text-5xl font-bold">Kontak Kami</h2>
+        <h2 class="text-sky-400 text-5xl font-bold" id="kontak">Kontak Kami</h2>
 
-        <p class="text-lg max-w-4xl">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis dignissimos officia laudantium quod eius nisi?</p>
+        <p class="text-lg max-w-4xl">Untuk informasi lebih lanjut, jangan ragu untuk menghubungi kami</p>
       </div>
 
       <div class="mt-12 grid grid-cols-3 gap-6">
         <div class="w-full space-y-10 shadow-lg py-12 px-8 rounded-xl">
           <div class="flex justify-between items-center">
             <h4 class="text-xl font-bold">WhatsApp</h4>
-            <span class="text-xl font-semibold">+62 857-9245-9822</span>
+            <span class="text-xl font-semibold">081341530762</span>
           </div>
 
           <div class="bg-sky-500 w-[70%] mx-auto py-4 px-8 rounded-full text-center">
-            <h4 class="text-white text-xl font-semibold">Start a conversation</h4>
+            <a href="https://wa.me/+6285792459822">
+              <h4 class="text-white text-xl font-semibold">Start a conversation</h4>
+            </a>
           </div>
         </div>
         <div class="w-full space-y-10 shadow-lg py-12 px-8 rounded-xl">
           <div class="flex justify-between items-center">
-            <h4 class="text-xl font-bold">WhatsApp</h4>
-            <span class="text-xl font-semibold">+62 857-9245-9822</span>
+            <h4 class="text-xl font-bold">Instagram</h4>
+            <span class="text-xl font-semibold">kna.construction</span>
           </div>
 
           <div class="bg-sky-500 w-[70%] mx-auto py-4 px-8 rounded-full text-center">
-            <h4 class="text-white text-xl font-semibold">Start a conversation</h4>
+            <a href="https://www.instagram.com/kna.construction?igsh=MWc5bHhtbmg3NGlmdQ==">
+              <h4 class="text-white text-xl font-semibold">Start a conversation</h4>
+            </a>
           </div>
         </div>
         <div class="w-full space-y-10 shadow-lg py-12 px-8 rounded-xl">
           <div class="flex justify-between items-center">
-            <h4 class="text-xl font-bold">WhatsApp</h4>
-            <span class="text-xl font-semibold">+62 857-9245-9822</span>
+      
+            <h4 class="text-xl font-bold">Email</h4>
+            <span class="text-xl font-semibold">keanu.konstruksi@gmail.com</span>
           </div>
 
           <div class="bg-sky-500 w-[70%] mx-auto py-4 px-8 rounded-full text-center">
-            <h4 class="text-white text-xl font-semibold">Start a conversation</h4>
+            <a href="mailto:keanu.konstruksi@gmail.com">
+              <h4 class="text-white text-xl font-semibold">Start a conversation</h4>
+            </a>
           </div>
         </div>
       </div>
@@ -482,31 +488,7 @@
           href="#"
           class="w-[140px] mb-6"
         >
-          <img
-             src="{{ asset('images/logo-transparent.png') }}"
-            alt="Company Logo"
-            class="w-[140px]"
-          />
         </a>
-
-        <form class="w-full">
-          <fieldset class="form-control">
-            <label class="label">
-              <span class="label-text mb-4">Masukan alamat email anda untuk berlangganan berita dari kami.</span>
-            </label>
-            <div class="join">
-              <input
-                type="text"
-                placeholder="username@site.com"
-                class="input input-bordered join-item w-80"
-              />
-              <button class="btn btn-info text-white join-item">Subscribe</button>
-            </div>
-            <label class="label mt-4">
-              <span class="label-text mb-4 max-w-lg">By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company. </span>
-            </label>
-          </fieldset>
-        </form>
       </nav>
 
       <nav>
@@ -518,16 +500,10 @@
           <i class="fa-brands fa-instagram"></i><span>Instagram</span>
         </a>
         <a
-          href="#"
+          href="https://www.instagram.com/kna.construction?igsh=MWc5bHhtbmg3NGlmdQ=="
           class="link link-hover space-x-3 inline-flex items-center"
         >
           <i class="fa-brands fa-facebook"></i><span>Facebook</span>
-        </a>
-        <a
-          href="#"
-          class="link link-hover space-x-3 inline-flex items-center"
-        >
-          <i class="fa-brands fa-x-twitter"></i><span>X</span>
         </a>
         <a
           href="#"
@@ -542,42 +518,36 @@
         <a
           href="#"
           class="link link-hover"
-          >Homepage</a
+          >Beranda</a
         >
         <a
-          href="#"
+          href="#proyekKami"
           class="link link-hover"
-          >Projects</a
+          >Proyek Kami</a
         >
         <a
-          href="#"
+          href="#layanan"
           class="link link-hover"
-          >Solutions</a
+          >Layanan</a
         >
         <a
-          href="#"
+          href="#kontak"
           class="link link-hover"
-          >Associates Program</a
+          >Kontak Kami</a
         >
         <a
-          href="#"
+          href="#cabangKami"
           class="link link-hover"
-          >Our Office</a
-        >
-        <a
-          href="#"
-          class="link link-hover"
-          >Blogs</a
+          >Cabang Kami</a
         >
       </nav>
 
       <nav>
         <h6 class="text-black font-bold text-lg mb-4">Quick Links</h6>
-        <a class="link link-hover">Email : knaconstruction@gmail.com</a>
-        <a class="link link-hover">PDF Company Profile</a>
+        <a  href="mailto:keanu.konstruksi@gmail.com" class="link link-hover">Email : knaconstruction@gmail.com</a>
+        {{-- <a class="link link-hover">PDF Company Profile</a> --}}
       </nav>
     </footer>
-
     <footer class="footer container mx-auto py-6 text-base-content border-base-300 border-t">
       <aside class="grid-flow-col items-center">
         <p>
