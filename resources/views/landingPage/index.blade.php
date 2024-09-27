@@ -1,3 +1,4 @@
+{{-- @dd($latestProyek) --}}
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 
@@ -96,12 +97,11 @@
         <div class="hero-overlay bg-black bg-opacity-40 z-[2] absolute top-0 left-0 w-full h-full"></div>
         {{-- <video
         loop
-        muted
-        playsinline
+
         class="absolute top-0 left-0 w-full h-full object-cover"
       >
         <source
-          src="{{ asset('videos/KNA.mp4') }}"
+          src="{{ asset('videos/hero-video.mp4') }}"
           type="video/mp4"
         />
       </video> --}}
@@ -189,26 +189,24 @@
 
         <div class="card lg:card-side mt-10 rounded-lg border border-slate-400 bg-base-100 h-full lg:h-[450px] w-full">
             <figure class="w-full lg:w-[60%] h-[12.5rem] lg:h-auto">
-                <img src="{{ asset('images/main-project-1.webp') }}" alt="Album" class="h-full w-full object-fill" />
+                <img src="{{ asset('images') }}/{{ $latestProyek->foto_utama_proyek }}" alt="Foto Utama" class="h-full w-full object-fill" />
             </figure>
 
             <div class="card-body w-full lg:w-[40%] p-6 lg:p-12 flex flex-col justify-between">
                 <div class="flex flex-col space-y-2 lg:space-y-4">
                     <span class="font-bold line-clamp-1">
-                        <span class="badge bg-neutral-100 px-4 py-4 rounded-md font-bold mr-2">11.000 m
+                    <span class="badge bg-neutral-100 px-4 py-4 rounded-md font-bold mr-2">{{ $latestProyek->size_proyek }}
                             <sup>2</sup></span>
-                        Kuta, Pujut, Central Lombok Regency, West Nusa Tenggara
+                        {{ $latestProyek->lokasi_proyek }}
                     </span>
-                    <h2 class="card-title text-2xl lg:text-4xl font-bold text-sky-400">ITDC - Bazaar Mandalika</h2>
-                    <span class="text-lg lg:text-xl font-bold">This project was completed in just 75 days</span>
+                    <h2 class="card-title text-2xl lg:text-4xl font-bold text-sky-400">{{ $latestProyek->nama_proyek }}</h2>
+                    <span class="text-lg lg:text-xl font-bold">{{ $latestProyek->tahun_proyek }}</span>
                     <span class="text-base lg:text-lg line-clamp-2 overflow-hidden">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora odit nemo error adipisci quae
-                        eius itaque commodi deserunt, aperiam sunt obcaecati? Obcaecati ad alias pariatur? Maxime
-                        numquam alias repudiandae unde.
+                      {{ $latestProyek->deskripsi_proyek }}
                     </span>
                 </div>
                 <div class="card-actions mt-4">
-                    <a href="#" class="font-semibold space-x-4">
+                    <a href="/detail/{{ $latestProyek->id_proyek }}" class="font-semibold space-x-4">
                         View details
                         <i class="fa-solid fa-chevron-right text-sm"></i>
                     </a>
@@ -220,7 +218,7 @@
             @foreach ($proyek as $row)
                 <div class="card border border-slate-400">
                     <figure>
-                        <img src="{{ asset('images') }}/project-1.jpg" alt="Project Preview" />
+                        <img src="{{ asset('images') }}/{{ $row->foto_utama_proyek }}" alt="Project Preview" />
                     </figure>
                     <div class="card-body py-8 px-8">
                         <span class="font-bold mb-1"><span
@@ -377,50 +375,17 @@
             @endforeach
         </div> --}}
         <div class="grid grid-cols-1 md:!grid-cols-2 lg:!grid-cols-4 gap-8 mt-10">
+            @foreach ($testimoni as $item)
             <div class="card border border-slate-400">
                 <figure>
-                    <img src="{{ asset('images') }}/project-1.jpg" alt="Testimonial Preview" class="rounded-xl" />
+                    <img src="{{ asset('images') }}/{{ $item->gambar_testimoni }}" alt="Testimonial Preview" class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center p-6">
-                    <h4 class="font-bold text-xl">Proyek 1</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui minus cupiditate doloremque ea
-                        illo, tempora repellendus earum cumque maiores vero iste fugiat praesentium fuga sit? Vel
-                        voluptatem nam consequatur quo.</p>
+                    <h4 class="font-bold text-xl">{{ $item->proyek->nama_proyek }}</h4>
+                    <p>{{ $item->deskripsi_testimoni }}</p>
                 </div>
             </div>
-            <div class="card border border-slate-400">
-                <figure>
-                    <img src="{{ asset('images') }}/project-1.jpg" alt="Testimonial Preview" class="rounded-xl" />
-                </figure>
-                <div class="card-body items-center text-center p-6">
-                    <h4 class="font-bold text-xl">Proyek 1</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui minus cupiditate doloremque ea
-                        illo, tempora repellendus earum cumque maiores vero iste fugiat praesentium fuga sit? Vel
-                        voluptatem nam consequatur quo.</p>
-                </div>
-            </div>
-            <div class="card border border-slate-400">
-                <figure>
-                    <img src="{{ asset('images') }}/project-1.jpg" alt="Testimonial Preview" class="rounded-xl" />
-                </figure>
-                <div class="card-body items-center text-center p-6">
-                    <h4 class="font-bold text-xl">Proyek 1</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui minus cupiditate doloremque ea
-                        illo, tempora repellendus earum cumque maiores vero iste fugiat praesentium fuga sit? Vel
-                        voluptatem nam consequatur quo.</p>
-                </div>
-            </div>
-            <div class="card border border-slate-400">
-                <figure>
-                    <img src="{{ asset('images') }}/project-1.jpg" alt="Testimonial Preview" class="rounded-xl" />
-                </figure>
-                <div class="card-body items-center text-center p-6">
-                    <h4 class="font-bold text-xl">Proyek 1</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui minus cupiditate doloremque ea
-                        illo, tempora repellendus earum cumque maiores vero iste fugiat praesentium fuga sit? Vel
-                        voluptatem nam consequatur quo.</p>
-                </div>
-            </div>
+             @endforeach
         </div>
 
         <div class="flex justify-center items-center lg:hidden">
@@ -637,12 +602,12 @@
                 Silahkan isi form dibawah ini untuk menambahkan respon anda terhadap kami
             </p>
 
-            <form action="">
+            <form action="/response" method="POST">
                 @csrf
 
                 <div class="mb-4">
                     <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nama</label>
-                    <input type="text" id="name"
+                    <input name="nama_lengkap" type="text" id="name"
                         class="input input-bordered w-full rounded-md border-gray-400"
                         placeholder="Masukkan nama Anda..." />
                 </div>
@@ -650,7 +615,7 @@
                 {{-- email field --}}
                 <div class="mb-4">
                     <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                    <input type="email" id="email"
+                    <input name="email" type="email" id="email"
                         class="input input-bordered w-full rounded-md border-gray-400"
                         placeholder="Masukkan email Anda..." />
                 </div>
@@ -658,14 +623,14 @@
                 {{-- no hp field --}}
                 <div class="mb-4">
                     <label for="no_hp" class="block text-sm font-medium text-gray-700 mb-2">No Hp</label>
-                    <input type="text" id="no_hp"
+                    <input name="no_hp" type="text" id="no_hp"
                         class="input input-bordered w-full rounded-md border-gray-400"
                         placeholder="Masukkan no hp Anda..." />
                 </div>
 
                 <div class="mb-4">
                     <label for="comment" class="block text-sm font-medium text-gray-700 mb-2">Pesan</label>
-                    <textarea id="comment" rows="4" class="textarea textarea-bordered w-full border-gray-400"
+                    <textarea name="pesan" id="comment" rows="4" class="textarea textarea-bordered w-full border-gray-400"
                         placeholder="Tulis pesan Anda..."></textarea>
                 </div>
                 <div class="flex justify-end">

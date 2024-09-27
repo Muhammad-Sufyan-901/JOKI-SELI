@@ -4,7 +4,7 @@
   <div class="row">
     <div class="col-12 p-3 bg-white">
         <h3>Proyek</h3>
-            <form action="{{ route('proyek.update', $proyek->id_proyek) }}" method="post">
+            <form action="{{ route('proyek.update', $proyek->id_proyek) }}" enctype="multipart/form-data" method="post">
         @csrf
            @method('PUT')
             <div class="mb-3">
@@ -24,6 +24,10 @@
             </div>
             <div class="mb-3">
                 <input value="{{ $proyek->deskripsi_proyek }}" type="text" name="deskripsi_proyek" placeholder=" Ukuran Proyek" class="form-control" required>
+            </div>
+                   <div class="mb-3">
+                <label for="gambar" class="form-label"> Gambar Utama</label>
+                <input type="file" name="foto_utama_proyek" class="form-control" required>
             </div>
             <a href="/proyek" class="btn btn-success" >Back</a>
             <button type="submit" class="btn btn-primary" name="submit" >Save</button>

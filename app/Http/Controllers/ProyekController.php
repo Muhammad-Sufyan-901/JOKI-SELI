@@ -75,17 +75,33 @@ class ProyekController extends Controller
     /**
      * Update the specified resource in storage.
      */
+
+   
+
     public function update(Request $request, Proyek $proyek)
     {
-       $data = [
+        $field = [
             'nama_proyek' => $request->nama_proyek,
             'lokasi_proyek' => $request->lokasi_proyek,
             'tahun_proyek' => $request->tahun_proyek,
             'size_proyek' => $request->size_proyek,
             'budget_proyek' => $request->budget_proyek,
             'deskripsi_proyek' => $request->deskripsi_proyek,
-       ];
-        $proyek->update($data);
+            'foto_utama_proyek' => $request->foto_utama_proyek,
+        ];
+      $photo = null;
+
+      if($request->foto_utama_proyek){
+        // validate
+          $request->validate([
+                'foto_utama_proyek' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            ]);
+            $photo = time().'-'.$request->foto_utama_proyek->getClientOriginalName();
+            $request->foto_utama_proyek->move(public_path('images'), $photo);
+            $field['foto_utama_proyek'] = $photo;
+        }
+    
+        $proyek->update($field);
         return redirect()->route('proyek')->with('update', 'Proyek berhasil diubah');
     }
 

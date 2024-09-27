@@ -16,8 +16,7 @@ class ResponseController extends Controller
 
     public function store(Request $request)
     {
-        // var_dump($request->all());
-        // exit;
+    
         $request->validate([
             'nama_lengkap' => 'required',
             'email' => 'required',

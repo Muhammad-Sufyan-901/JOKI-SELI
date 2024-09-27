@@ -12,10 +12,20 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 class Proyek extends Model
 {
     use HasFactory;
-    protected $guarded = [];
+ 
     public $timestamps = false;
     protected $table = 'proyek';
     protected $primaryKey = 'id_proyek';
+  
+    protected $fillable = [
+        'nama_proyek',
+        'lokasi_proyek',
+        'tahun_proyek',
+        'size_proyek',
+        'budget_proyek',
+        'deskripsi_proyek',
+        'foto_utama_proyek',
+    ];
 
     public function gambarProyek(): HasMany
     {

@@ -66,7 +66,7 @@ class TestimonialController extends Controller
      */
     public function update(Request $request, Testimonial $testimoni)
     {
-        // dd($request->all());
+       
        $field =[
             'id_proyek' => $request->id_proyek,
             'deskripsi_testimoni' => $request->deskripsi_testimoni,
@@ -76,11 +76,12 @@ class TestimonialController extends Controller
             $request->validate([
                 'gambar_testimoni' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             ]);
+        
             $photo = time().'-'.$request->gambar_testimoni->getClientOriginalName();
             $request->gambar_testimoni->move(public_path('images'), $photo);
             $field['gambar_testimoni'] = $photo;
         }
-        // dd($field);
+
         $testimoni->update($field);
         return redirect('/testimoni')->with('update', 'Testimonial berhasil diubah'); 
     }
